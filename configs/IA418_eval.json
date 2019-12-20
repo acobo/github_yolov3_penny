@@ -1,0 +1,24 @@
+{
+    "model" : {
+        "anchors":              [17,18, 28,24, 36,34, 42,44, 56,51, 72,66, 90,95, 92,154, 139,281],
+        	"labels":           ["Artemisina","Dendrophyllia","Esponja Incrustante","Holoturia","Phakelia"],
+        "net_size":            	416
+    },
+    "pretrained" : {
+        "keras_format":             "configs/IA418_train1/weights_19dic2019.h5",
+        "darknet_format":           ""
+    },
+    "train" : {
+        "min_size":             416,
+        "max_size":             416,
+        "num_epoch":            100,
+        "train_image_folder":   "~/storage/dataset/IA418_TF26/img",
+        "train_annot_folder":   "~/storage/dataset/IA418_TF26/ann",
+        "valid_image_folder":   "~/storage/dataset/IA418_TF26/img",
+        "valid_annot_folder":   "~/storage/dataset/IA418_TF26/ann",
+        "batch_size":           10,
+        "learning_rate":        1e-4,
+        "save_folder":         "configs/IA418_train1",
+        "jitter":               false
+    }
+}
