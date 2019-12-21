@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import logging
 import tensorflow as tf
 import os
 from tqdm import tqdm
@@ -11,7 +12,7 @@ def train_fn(model, train_generator, valid_generator=None, learning_rate=1e-4, n
     
     save_fname = _setup(save_dname)
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
-    
+	
     history = []
     for i in range(num_epoches):
 
@@ -25,12 +26,15 @@ def train_fn(model, train_generator, valid_generator=None, learning_rate=1e-4, n
         else:
             loss_value = train_loss
         print("{}-th loss = {}, train_loss = {}".format(i, loss_value, train_loss))
+        logging.error("epoch:" + str(i))
+        logging.error("losses:" + str(loss_value))
 
         # 3. update weights
         history.append(loss_value)
         if save_fname is not None and loss_value == min(history):
             print("    update weight {}".format(loss_value))
             model.save_weights("{}.h5".format(save_fname))
+            logging.error("Guardando archivo de weights")
     
     return history
 
