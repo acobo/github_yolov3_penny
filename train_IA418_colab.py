@@ -1,5 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
-# prueba de training from scratch con el dataset IA418_TF26 (50 imágenes con data augmentation
+# prueba de training from scratch con el dataset IA418_TF26 (50 imágenes con data augmentation)
 import os
 import logging #añadido 21dic2019 para sacar los prints() con los "losses" porque estaba escondido entre los warnings de los gradientes
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
@@ -37,7 +37,7 @@ argparser = argparse.ArgumentParser(
 argparser.add_argument(
     '-c',
     '--config',
-    default="configs/IA418_train1_deep.json",  # configuración de archivos y recursos (batch size...) para deep.teisa.unican.es
+    default="configs/IA418_train1_colab.json",  # configuración de archivos y recursos (batch size...) para deep.teisa.unican.es
     help='config file')
 
 
