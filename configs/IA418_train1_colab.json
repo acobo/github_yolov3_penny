@@ -12,13 +12,13 @@
         "min_size":             416,
         "max_size":             416,
         "num_epoch":            100,
-        "train_image_folder":   "XXXXXXXXXtests/dataset/IA418_TF26/img",
-        "train_annot_folder":   "tests/dataset/IA418_TF26/ann",
-        "valid_image_folder":   "tests/dataset/IA418_TF26/img",
-        "valid_annot_folder":   "tests/dataset/IA418_TF26/ann",
+        "train_image_folder":   "/content/gdrive/My Drive/dataset/Aviles_IA418/IA418_TF26_416px_augmented/train/img",
+        "train_annot_folder":   "/content/gdrive/My Drive/dataset/Aviles_IA418/IA418_TF26_416px_augmented/train/ann",
+        "valid_image_folder":   "/content/gdrive/My Drive/dataset/Aviles_IA418/IA418_TF26_416px_augmented/eval/img",
+        "valid_annot_folder":   "/content/gdrive/My Drive/dataset/Aviles_IA418/IA418_TF26_416px_augmented/eval/ann",
         "batch_size":           2,
         "learning_rate":        1e-4,
-        "save_folder":         "configs/IA418_train1",
+        "save_folder":         "configs/IA418_train1_colab",
         "jitter":               false
     }
 }
