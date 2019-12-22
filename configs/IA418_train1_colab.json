@@ -6,7 +6,7 @@
     },
     "pretrained" : {
         "keras_format":             "weights_22dic2019.h5",
-        "darknet_format":           "xxx_yolov3.weights"
+        "darknet_format":           ""
     },
     "train" : {
         "min_size":             416,
