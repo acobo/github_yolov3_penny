@@ -6,6 +6,7 @@ import struct
 class WeightReader:
     def __init__(self, weight_file):
         with open(weight_file, 'rb') as w_f:
+            print("he abierto el fichero de pesos correctamente " ,weight_file)
             major,    = struct.unpack('i', w_f.read(4))
             minor,    = struct.unpack('i', w_f.read(4))
             _, = struct.unpack('i', w_f.read(4))
