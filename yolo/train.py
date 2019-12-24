@@ -14,6 +14,7 @@ def train_fn(model, train_generator, valid_generator=None, learning_rate=1e-4, n
     optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
 	
     history = []
+    history_train = []  # guardamos también los pesos para losses mínimas, 
     for i in range(num_epoches):
 
         # 1. update params
@@ -31,10 +32,16 @@ def train_fn(model, train_generator, valid_generator=None, learning_rate=1e-4, n
 
         # 3. update weights
         history.append(loss_value)
+	history_train.append(train_loss)
         if save_fname is not None and loss_value == min(history):
             print("    update weight {}".format(loss_value))
             model.save_weights("{}.h5".format(save_fname))
             logging.error("Guardando archivo de weights")
+        if save_fname is not None and train_loss == min(history_train):
+            print("    update weight train {}".format(train_loss))
+            model.save_weights("{}.h5".format(save_fname+'_train'))
+            logging.error("Guardando archivo de weights (train)")
+    
     
     return history
 
