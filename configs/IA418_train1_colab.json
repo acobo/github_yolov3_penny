@@ -5,7 +5,7 @@
         "net_size":            	416
     },
     "pretrained" : {
-        "keras_format":             "/content/gdrive/My Drive/deep/tf2-eager-yolo3/configs/IA418_train1_colab/weights_22dic2019.h5",
+        "keras_format":             "/content/gdrive/My Drive/deep/tf2-eager-yolo3/configs/IA418_train1_colab/weights_23dic2019.h5",
         "darknet_format":           "yolov3.weights"
     },
     "train" : {
